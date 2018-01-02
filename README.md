@@ -40,7 +40,9 @@ As for discourse-level analysis, two datasets are mainly used:
 
 - [Discourse Relations and Conjoined VPs: Automated Sense Recognition](http://aclweb.org/anthology/E/E17/E17-4004.pdf), EACL 2017. 
 
-- [Multi-task Attention-based Neural Networks for Implicit Discourse Relationship Representation and Identification](http://aclweb.org/anthology/D/D17/D17-1134.pdf), EMNLP 2017. Baidu Inc. `model`
+- (**MTA17**) [Multi-task Attention-based Neural Networks for Implicit Discourse Relationship Representation and Identification](http://aclweb.org/anthology/D/D17/D17-1134.pdf), EMNLP 2017. Baidu Inc. `model`
+
+  ![MTA17](/assets/imgs/MTA17.png)
 
 ##### 2016
 
