@@ -32,6 +32,7 @@ class RNNAtt17(nn.Module):
 
 	def forward(self, input)
 	"""
+
 	Args
 	----------
 	input   : [N, 256]
@@ -40,8 +41,9 @@ class RNNAtt17(nn.Module):
 
 	Returns
 	----------
-	logprob : [N, 4]
-		4 means top-level PDTB relation number
+	logprob : [N, C]
+		C means number of classes
+
 	"""
 		batch_size = input.size(0)
 
@@ -72,7 +74,7 @@ class RNNAtt17(nn.Module):
 			alpha.unsqueeze(2)
 		).squeeze(2) # [N, 300]
 
-		unnormalized_prob = self.proj2class(r) # [N, 4]
+		unnormalized_prob = self.proj2class(r) # [N, C]
 		logprob = F.log_softmax(unnormalized_prob)
 
 		return logprob

@@ -22,7 +22,7 @@ class GRN16(nn.Module):
 			50
 		)
 
-		self.bilstm = nn.LSTM(
+		self.blstm = nn.LSTM(
 			50,
 			50,
 			batch_first=True,
@@ -70,8 +70,8 @@ class GRN16(nn.Module):
 		arg1, arg2 = input
 		arg1_emb = self.emb(arg1)
 		arg2_emb = self.emb(arg2)
-		arg1_hid, _ = self.bilstm(arg1_emb) # [N, 50, 50 * 2]
-		arg2_hid, _ = self.bilstm(arg2_emb) # [N, 50, 50 * 2]
+		arg1_hid, _ = self.blstm(arg1_emb) # [N, 50, 50 * 2]
+		arg2_hid, _ = self.blstm(arg2_emb) # [N, 50, 50 * 2]
 
 		cross_hid = self.construct_cross_hid(
 			arg1_hid,
