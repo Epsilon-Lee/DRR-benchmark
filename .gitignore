@@ -1,3 +1,5 @@
 raw_data/pdtb_data/
 raw_data/pdtb_data.zip
 raw_data/RST.zip
+venv/
+.idea/
